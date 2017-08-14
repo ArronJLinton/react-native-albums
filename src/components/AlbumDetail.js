@@ -1,13 +1,14 @@
 import React from 'react';
-import { Text, Image, View } from 'react-native';
+import { Text, Image, View, Linking } from 'react-native';
 import Card from './Card';
 import CardSection from './CardSection';
+import Button from './Button';
 
 
 const AlbumDetail = ({ album}) => {
 
 // refactoring
-	const { title, artist, thumbnail_image, image } = album;
+	const { title, artist, thumbnail_image, image, url } = album;
 	const { 
 		headerContent, 
 		thumbnailStyle, 
@@ -30,11 +31,19 @@ const AlbumDetail = ({ album}) => {
 					<Text>{artist}</Text>
 				</View>
 			</CardSection>
+
 			<CardSection>
 					<Image 
 						style={albumCover}
 						source={{ uri: image }}
 					/>
+			</CardSection>
+
+			<CardSection>
+		{/* react-native linking api used to redirect user to external apps/links */}
+				<Button onPress={() => Linking.openURL(url)}>
+				Buy Now
+				</Button>
 			</CardSection>
 		</Card>
 		);
