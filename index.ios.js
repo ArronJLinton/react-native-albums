@@ -19,7 +19,8 @@ const App = () => (
   // component nesting
   // passing 'props' inside components
   // pass in a property called headerText
-  <View>
+  // flex: 1 - > expand component to fit the entire container of the content device
+  <View style={{ flex: 1 }}>
     <Header headerText={'Albums'} />
     <AlbumList />
   </View>
