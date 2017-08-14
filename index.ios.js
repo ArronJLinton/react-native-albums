@@ -4,11 +4,12 @@
 // import - es6 method to import libraries 
 import React from 'react';
 // import destructoring
-import { AppRegistry } from 'react-native';
+import { AppRegistry, View } from 'react-native';
 // import components
 // ./ start in the current directory(albums directory in this case)
 // if its a js file, we do not have to put .js at the end
-import Header from './src/components/header';
+import Header from './src/components/Header';
+import AlbumList from './src/components/AlbumList';
 
 
 // create a componenet
@@ -16,9 +17,12 @@ import Header from './src/components/header';
 // JSX is a dialect of javascript that tells react native what content to render on the screen
 const App = () => (
   // component nesting
-  // passing 'props'
+  // passing 'props' inside components
   // pass in a property called headerText
+  <View>
     <Header headerText={'Albums'} />
+    <AlbumList />
+  </View>
   );
 
 
