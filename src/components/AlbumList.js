@@ -1,8 +1,9 @@
 // Grab the Component method from the react library
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+import { View } from 'react-native';
 // usede to make http requests
 import axios from 'axios'; 
+import AlbumDetail from './AlbumDetail';
 
 class AlbumList extends Component {
 	// initializing state
@@ -24,13 +25,17 @@ class AlbumList extends Component {
 			// called with a single album out of the albums array
 			// return text tag with album.title
 			// use {} to reference a javaScript varibale in JSX
-			return this.state.albums.map(album => <Text>{album.title}</Text>);
+			return this.state.albums.map(album => 
+			// need to assign each element a key so react knows which element in the array to update 
+				<AlbumDetail key={album.title} album={album} />
+				);
 		}
 
 	render() {
 			console.log(this.state);
 		return (
 			<View>
+
 				{this.renderAlbums()}
 			</View>
 			);
