@@ -5,7 +5,7 @@ import CardSection from './CardSection';
 import Button from './Button';
 
 
-const AlbumDetail = ({ album}) => {
+const AlbumDetail = ({album}) => {
 
 // refactoring
 	const { title, artist, thumbnail_image, image, url } = album;

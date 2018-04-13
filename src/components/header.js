@@ -19,24 +19,25 @@ const Header = (props) => {
 
 // all styles in react native uses camel casing rather than -
 const styles = {
-	viewStyle: {
-		// neutral eggwhite color
-		backgroundColor: '#F8F8F8',
-		justifyContent: 'center',
-		alignItems: 'center',
-		height: 60,
-		paddingTop: 15,
-		// black color
-		shadowColor: '#000',
-		// dimensions of the shadow
-		shadowOffset: { width: 0, height: 2 },
-		shadowOpacity: 0.2,
-		elevation: 2,
-		position: 'relative'
-	},
-	textStyle: {
-		fontSize: 20
-	}
+  viewStyle: {
+    // neutral eggwhite color
+    // backgroundColor: "#F8F8F8",
+    backgroundColor: 'lightblue',
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: 60,
+    paddingTop: 15,
+    // black color
+    shadowColor: '#000',
+    // dimensions of the shadow
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.2,
+    elevation: 2,
+    position: 'relative'
+  },
+  textStyle: {
+    fontSize: 20
+  }
 };
 
 // Make the component available to other parts of the app 
